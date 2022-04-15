@@ -55,6 +55,7 @@ console.log(a ? "참" : "거짓");
 
 import abc from "./getRandom";
 import { format } from "path";
+import { sign } from "crypto";
 // 조건문(if)
 const a = random();
 if (a === 0) {
@@ -95,3 +96,55 @@ for (i = 0; i < 3; i += 1) {
   }
   ulEl.appendChild(li);
 }
+// 변수 유효범위(Varable Scope)
+// var, let , const
+
+function Scope() {
+  if (true) {
+    const a = 123;
+    console.log(a);
+  }
+}
+Scope();
+// 형 변환(Type conversion) ==
+
+const a = 1;
+const b = "1";
+
+console.log(a == b); // == 두개의 데이터를 비교 할때는 일치연산자를(===) 활용
+// Truthy(참 같은 값)
+// true, {} , [] , 1 , 2 "false" , -12 , "3.14"...
+// false(거짓 같은 값)
+// false, "" , null , undefined , 0 , -0 , NaN
+if (true) {
+  console.log(123);
+}
+// 함수 복습
+function sum(x, y) {
+  // console.log(x + y);
+  return x + y;
+}
+const a = sum(1, 3);
+const b = sum(4, 12);
+
+console.log(a);
+
+// 함수 복습 2
+function sum() {
+  return;
+}
+console.log(sum(7, 3));
+
+// 화살표 함수
+// () => {} vs function () {}
+const double = function (x) {
+  return X * 2;
+};
+console.log("double:", double(7));
+
+// const doubleArrow = (x) => x * 2;
+const doubleArrow = (x) => ({
+  name: "heropy";
+}); // 객체 데이터 활용 때는 소괄호로 감싸줘야 한다.({})
+
+console.log("doubleArrow", doubleArrow(7));
