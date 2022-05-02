@@ -1,0 +1,16 @@
+/* .image {
+  width: 360px;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid;
+  border-radius: 10px;
+  font-size: 28px;
+  font-weight: 700;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image.done {
+  background-image: url("https://gstatic.com/webp/gallery/1.jpg");
+} */
